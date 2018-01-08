@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="数据结构," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="按照我们上课的进度，国庆回来数据结构大概就要进行第一次过程化考核了，所以在国庆嗨了两天的数据结构= =。   线性表的抽象数据类型 顺序表与链表 顺序表和链表的操作注意事项 在面向对象的语言中写顺序表的注意事项    1.线性表的抽象数据类型这里的LinkList其实只是一些默认的称呼，要是不喜欢的话随便叫个大毛二毛对写的内容是没有影响的。但是默认的称谓看一眼看出该函数的作用，没什么特殊需要还是">
+<meta name="keywords" content="数据结构">
+<meta property="og:type" content="article">
+<meta property="og:title" content="咸鱼开始补习数据结构">
+<meta property="og:url" content="http://grassgrass.top/2017/10/07/咸鱼开始补习数据结构/index.html">
+<meta property="og:site_name" content="Grassgrass&#39;s Blog">
+<meta property="og:description" content="按照我们上课的进度，国庆回来数据结构大概就要进行第一次过程化考核了，所以在国庆嗨了两天的数据结构= =。   线性表的抽象数据类型 顺序表与链表 顺序表和链表的操作注意事项 在面向对象的语言中写顺序表的注意事项    1.线性表的抽象数据类型这里的LinkList其实只是一些默认的称呼，要是不喜欢的话随便叫个大毛二毛对写的内容是没有影响的。但是默认的称谓看一眼看出该函数的作用，没什么特殊需要还是">
+<meta property="og:updated_time" content="2017-12-14T02:55:38.289Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="咸鱼开始补习数据结构">
+<meta name="twitter:description" content="按照我们上课的进度，国庆回来数据结构大概就要进行第一次过程化考核了，所以在国庆嗨了两天的数据结构= =。   线性表的抽象数据类型 顺序表与链表 顺序表和链表的操作注意事项 在面向对象的语言中写顺序表的注意事项    1.线性表的抽象数据类型这里的LinkList其实只是一些默认的称呼，要是不喜欢的话随便叫个大毛二毛对写的内容是没有影响的。但是默认的称谓看一眼看出该函数的作用，没什么特殊需要还是">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://grassgrass.top/2017/10/07/咸鱼开始补习数据结构/"/>
+
+
+
+
+
+  <title>咸鱼开始补习数据结构 | Grassgrass's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Grassgrass's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://grassgrass.top/2017/10/07/咸鱼开始补习数据结构/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Grassgrass">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Grassgrass's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">咸鱼开始补习数据结构</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-07T10:45:51+08:00">
+                2017-10-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/咸鱼凑数/" itemprop="url" rel="index">
+                    <span itemprop="name">咸鱼凑数</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <hr>
+<p>按照我们上课的进度，国庆回来数据结构大概就要进行第一次过程化考核了，所以在国庆嗨了两天的数据结构= =。</p>
+<blockquote>
+<ul>
+<li>线性表的抽象数据类型</li>
+<li>顺序表与链表</li>
+<li>顺序表和链表的操作注意事项</li>
+<li>在面向对象的语言中写顺序表的注意事项</li>
+</ul>
+</blockquote>
+<hr>
+<h2 id="1-线性表的抽象数据类型"><a href="#1-线性表的抽象数据类型" class="headerlink" title="1.线性表的抽象数据类型"></a>1.线性表的抽象数据类型</h2><p>这里的LinkList其实只是一些默认的称呼，要是不喜欢的话随便叫个大毛二毛对写的内容是没有影响的。但是默认的称谓看一眼看出该函数的作用，没什么特殊需要还是不要改的好哦= =</p>
+<p>1.InitList(*L):初始化操作，建立一个空的线性表</p>
+<p>2.ListEmpty(L):判断线性表是否为空表，若线性表为空，返回投入true，否则返回false</p>
+<p>3.ClearList(*L):将线性表清空</p>
+<p>4.GetElem(L,i,*e):将线性表L中的第i个位置元素值返回给e</p>
+<p>5.LocateElem(L,e):在线性表L中查找与给定值e相等的元素，如果查找成功，放回元素在表中序号，否则返回0失败</p>
+<p>6.ListInsert(*L,i,e):在线性表L中的第i个位置插入新元素e</p>
+<p>7.ListDelete( <em>L,i,</em>e):删除线性表L中第i个位置元素，并且用e返回其值</p>
+<p>8.ListLength(L):返回线性表L的元素个数</p>
+<h2 id="2-顺序表和链表"><a href="#2-顺序表和链表" class="headerlink" title="2.顺序表和链表"></a>2.顺序表和链表</h2><p>顺序表与链表可以被统称为线性表。</p>
+<p>顺序表和链表，是线性表的不同存储结构。它们各自有不同的特点和适用范围。<br>顺序表不利于插入删除操作，插入删除要移动气候所用元素。<br>链表便于元素的插入和删除，但其随机存储不如顺序表方便。</p>
+<p>更多有关详情(<a href="http://www.cnblogs.com/cyjb/p/Lists.html" target="_blank" rel="noopener">http://www.cnblogs.com/cyjb/p/Lists.html</a>)</p>
+<h2 id="3-顺序表和链表的操作注意事项"><a href="#3-顺序表和链表的操作注意事项" class="headerlink" title="3.顺序表和链表的操作注意事项"></a>3.顺序表和链表的操作注意事项</h2><p>在码代码之前对于我这样的菜鸡画个图是最好的选择，拿单链表的插入操作举个例子。</p>
+<pre><code>Status ListInsert( LinkList *L, int i,ElemType e)
+{
+    int j=1;
+    LinkList p,s;//LinkList的作用类似int，定义了变量p
+
+    while( p &amp;&amp; j&lt;i)//  用于寻找第i个结点位置，未到末尾且未到第i个结点
+    {
+        p = L-&gt;next;
+        j++;
+    }
+    if( !p || j&gt;i)//p不存在
+    {
+        return ERROR;
+    }
+
+    s = (LinkList)malloc(sizeof(Node));
+    s-&gt;data = e;
+
+    s-&gt;next = p-&gt;next;
+    p-&gt;next = s;
+
+    return OK;
+}
+</code></pre><p>23333 我只是想试一下新建文章<br><strong>剩下的还没憋出来,也懒得憋了orz</strong></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/数据结构/" rel="tag"># 数据结构</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/14/XXE漏洞学习及实际应用/" rel="prev" title="XXE漏洞学习及利用">
+                XXE漏洞学习及利用 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Grassgrass</p>
+              <p class="site-description motion-element" itemprop="description">一只正在努力学习的咸鱼美少女</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://sancrane.top/" title="sancrane" target="_blank">sancrane</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://Dfault0.top/" title="Dfault0" target="_blank">Dfault0</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-线性表的抽象数据类型"><span class="nav-number">1.</span> <span class="nav-text">1.线性表的抽象数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-顺序表和链表"><span class="nav-number">2.</span> <span class="nav-text">2.顺序表和链表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-顺序表和链表的操作注意事项"><span class="nav-number">3.</span> <span class="nav-text">3.顺序表和链表的操作注意事项</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Grassgrass</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.3</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+		<script type="text/javascript" color="107,142,35" opacity='0.7' zIndex="-2"  src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+
+</body>
+</html>
