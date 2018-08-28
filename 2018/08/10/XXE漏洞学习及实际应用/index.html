@@ -83,20 +83,20 @@
 <meta name="keywords" content="-XXE漏洞学习及实际应用 -JarvisOj平台做题总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="XXE漏洞学习及利用">
-<meta property="og:url" content="http://grassgrass.top/2017/08/10/XXE漏洞学习及实际应用/index.html">
+<meta property="og:url" content="http://grassgrass.top/2018/08/10/XXE漏洞学习及实际应用/index.html">
 <meta property="og:site_name" content="Grassgrass&#39;s Blog">
 <meta property="og:description" content="XXE漏洞基础学习当WEB服务使用XML或者JSON中的一种进行传输时，服务器可能会接收开发人员并未预料到的数据格式。如果服务器上的XML解析器的配置不完善，在JSON传输的终端可能会遭受XXE攻击，也就是俗称的XML外部实体攻击。 XXE是一种针对XML终端实施的攻击，黑客想要实施这种攻击，需要在XML的payload包含外部实体声明，且服务器本身允许实体扩展。这样的话，黑客或许能读取WEB服务">
-<meta property="og:image" content="http://grassgrass.top/2017/08/10/XXE漏洞学习及实际应用/在违法的边缘试探.jpg">
-<meta property="og:image" content="http://grassgrass.top/2017/08/10/XXE漏洞学习及实际应用/题目简介.jpg">
-<meta property="og:image" content="http://grassgrass.top/2017/08/10/XXE漏洞学习及实际应用/题目简介1.jpg">
-<meta property="og:image" content="http://grassgrass.top/2017/08/10/XXE漏洞学习及实际应用/图片1.jpg">
-<meta property="og:image" content="http://grassgrass.top/2017/08/10/XXE漏洞学习及实际应用/图片2.jpg">
-<meta property="og:image" content="http://grassgrass.top/2017/08/10/XXE漏洞学习及实际应用/图片3.jpg">
-<meta property="og:updated_time" content="2018-08-25T12:39:38.175Z">
+<meta property="og:image" content="http://grassgrass.top/2018/08/10/XXE漏洞学习及实际应用/在违法的边缘试探.jpg">
+<meta property="og:image" content="http://grassgrass.top/2018/08/10/XXE漏洞学习及实际应用/题目简介.jpg">
+<meta property="og:image" content="http://grassgrass.top/2018/08/10/XXE漏洞学习及实际应用/题目简介1.jpg">
+<meta property="og:image" content="http://grassgrass.top/2018/08/10/XXE漏洞学习及实际应用/图片1.jpg">
+<meta property="og:image" content="http://grassgrass.top/2018/08/10/XXE漏洞学习及实际应用/图片2.jpg">
+<meta property="og:image" content="http://grassgrass.top/2018/08/10/XXE漏洞学习及实际应用/图片3.jpg">
+<meta property="og:updated_time" content="2018-08-28T12:39:26.932Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="XXE漏洞学习及利用">
 <meta name="twitter:description" content="XXE漏洞基础学习当WEB服务使用XML或者JSON中的一种进行传输时，服务器可能会接收开发人员并未预料到的数据格式。如果服务器上的XML解析器的配置不完善，在JSON传输的终端可能会遭受XXE攻击，也就是俗称的XML外部实体攻击。 XXE是一种针对XML终端实施的攻击，黑客想要实施这种攻击，需要在XML的payload包含外部实体声明，且服务器本身允许实体扩展。这样的话，黑客或许能读取WEB服务">
-<meta name="twitter:image" content="http://grassgrass.top/2017/08/10/XXE漏洞学习及实际应用/在违法的边缘试探.jpg">
+<meta name="twitter:image" content="http://grassgrass.top/2018/08/10/XXE漏洞学习及实际应用/在违法的边缘试探.jpg">
 
 
 
@@ -126,7 +126,7 @@
 
 
 
-  <link rel="canonical" href="http://grassgrass.top/2017/08/10/XXE漏洞学习及实际应用/"/>
+  <link rel="canonical" href="http://grassgrass.top/2018/08/10/XXE漏洞学习及实际应用/"/>
 
 
 
@@ -270,7 +270,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://grassgrass.top/2017/08/10/XXE漏洞学习及实际应用/">
+    <link itemprop="mainEntityOfPage" href="http://grassgrass.top/2018/08/10/XXE漏洞学习及实际应用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Grassgrass">
@@ -299,8 +299,8 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-10T10:43:51+08:00">
-                2017-08-10
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-10T10:43:51+08:00">
+                2018-08-10
               </time>
             
 
@@ -365,7 +365,7 @@
 <p>XML用于标记电子文件使其具有结构性的标记语言，可以用来标记数据、定义数据类型，是一种允许用户对自己的标记语言进行定义的源语言。XML文档结构包括XML声明、DTD文档类型定义（可选）、文档元素。</p>
 <p>XML文件结构和基本语法 - CSDN博客:<br><a href="http://blog.csdn.net/jfkidear/article/details/6820642" target="_blank" rel="noopener">http://blog.csdn.net/jfkidear/article/details/6820642</a><br>未知攻焉知防——XXE漏洞攻防 - 腾讯安全应急响应中心:<br><a href="https://security.tencent.com/index.php/blog/msg/69" target="_blank" rel="noopener">https://security.tencent.com/index.php/blog/msg/69</a></p>
 <hr>
-<p><img src="/2017/08/10/XXE漏洞学习及实际应用/在违法的边缘试探.jpg" alt=""><br>在了解以上的知识之后就可以着手开始搞事情了，初级应用大概是用burp抓包，然后post一段xml格式的数据，<br>获取POST数据，是利用getParsedBody方法，而这个方法对POST的处理，是按照content-type来区分和解析的<br>有时候框架会帮开发者一些他可能并不需要的『忙』，</p>
+<p><img src="/2018/08/10/XXE漏洞学习及实际应用/在违法的边缘试探.jpg" alt=""><br>在了解以上的知识之后就可以着手开始搞事情了，初级应用大概是用burp抓包，然后post一段xml格式的数据，<br>获取POST数据，是利用getParsedBody方法，而这个方法对POST的处理，是按照content-type来区分和解析的<br>有时候框架会帮开发者一些他可能并不需要的『忙』，</p>
 <p>比如slimphp这里，<strong>常规的POST的content-type为application/x-www-form-urlencoded，但只要我将其修改为application/json，我就可以传入json格式的POST数据，修改为application/xml，我就可以传入XML格式的数据。</strong><br>这个特性将会导致两个问题：</p>
 <blockquote>
 <ul>
@@ -377,10 +377,10 @@
 <p><strong>将数据post过去时一定要记住将post去的数据改为xml格式</strong></p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="meta">&lt;?</span>xml version=<span class="string">"1.0"</span> encoding=<span class="string">"UTF-8"</span><span class="meta">?&gt;</span></span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE netspi [&lt;!ENTITY xxe SYSTEM "file:///etc/passwd" &gt;]&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">root</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">search</span>&gt;</span>admin<span class="tag">&lt;/<span class="name">search</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>&amp;xxe;<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <hr>
-<h2 id="XXE漏洞实例"><a href="#XXE漏洞实例" class="headerlink" title="XXE漏洞实例"></a>XXE漏洞实例</h2><p>api调用<br>题目链接： <a href="http://web.jarvisoj.com:9882/" target="_blank" rel="noopener">http://web.jarvisoj.com:9882/</a><br><img src="/2017/08/10/XXE漏洞学习及实际应用/题目简介.jpg" alt=""><br>点击进入后题目大概长这样= =<br><img src="/2017/08/10/XXE漏洞学习及实际应用/题目简介1.jpg" alt=""><br>在窗口输入数据会根据输入数据有不同的回显。<br>回显为输入数据+own（技术不行，回头考完试有时间把这个源代码爬下来orz）</p>
-<p>用burpsuite抓包<br><img src="/2017/08/10/XXE漏洞学习及实际应用/图片1.jpg" alt=""> </p>
-<p>按上面的方法常规post一段xml格式数据过去，得到一串文件目录信息<br><img src="/2017/08/10/XXE漏洞学习及实际应用/图片2.jpg" alt=""></p>
-<p>按照题目信息提示，post的xml系统文件应改为/home/ctf/flag.txt<br><img src="/2017/08/10/XXE漏洞学习及实际应用/图片3.jpg" alt=""></p>
+<h2 id="XXE漏洞实例"><a href="#XXE漏洞实例" class="headerlink" title="XXE漏洞实例"></a>XXE漏洞实例</h2><p>api调用<br>题目链接： <a href="http://web.jarvisoj.com:9882/" target="_blank" rel="noopener">http://web.jarvisoj.com:9882/</a><br><img src="/2018/08/10/XXE漏洞学习及实际应用/题目简介.jpg" alt=""><br>点击进入后题目大概长这样= =<br><img src="/2018/08/10/XXE漏洞学习及实际应用/题目简介1.jpg" alt=""><br>在窗口输入数据会根据输入数据有不同的回显。<br>回显为输入数据+own（技术不行，回头考完试有时间把这个源代码爬下来orz）</p>
+<p>用burpsuite抓包<br><img src="/2018/08/10/XXE漏洞学习及实际应用/图片1.jpg" alt=""> </p>
+<p>按上面的方法常规post一段xml格式数据过去，得到一串文件目录信息<br><img src="/2018/08/10/XXE漏洞学习及实际应用/图片2.jpg" alt=""></p>
+<p>按照题目信息提示，post的xml系统文件应改为/home/ctf/flag.txt<br><img src="/2018/08/10/XXE漏洞学习及实际应用/图片3.jpg" alt=""></p>
 <p>可以得到最后的flag为CTF{XxE_15_n0T_S7range_Enough}</p>
 
       
@@ -412,14 +412,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/07/28/JarvisOj平台做题总结-2/" rel="next" title="JarvisOj平台做题总结-2">
+                <i class="fa fa-chevron-left"></i> JarvisOj平台做题总结-2
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/10/07/咸鱼开始补习数据结构/" rel="prev" title="咸鱼开始补习数据结构">
-                咸鱼开始补习数据结构 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/08/18/计算机网络TCP-IP总结/" rel="prev" title="计算机网络TCP,IP总结">
+                计算机网络TCP,IP总结 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -497,7 +501,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
